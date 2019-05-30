@@ -94,19 +94,23 @@ docker-compose
 mkdir src
 cd src
 ```
-3. Clone the repo 
+3. Download and install Consul API dependency
+```
+go get github.com/hashicorp/consul/api
+``` 
+4. Clone the repo 
 ```
 git clone https://github.com/than-tryf/enedification.git
 ```   
 
-4. Change directory to point at $HOME/goimports/enedification/datacenter-agent and run the script build-with-docker.sh
+5. Change directory to point at $HOME/goimports/src/enedification/datacenter-agent and run the script build-with-docker.sh
 ```bash
-cd $HOME/goimports/enedification/datacenter-agent
+cd $HOME/goimports/src/enedification/datacenter-agent
 ./build-with-docker.sh 
 
 ```
 
-5. Run the produced excutable with root privilleges
+6. Run the produced excutable with root privilleges
 
 ```bash
 sudo ./datacenter-agent
